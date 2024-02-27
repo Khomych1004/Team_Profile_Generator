@@ -38,7 +38,7 @@ const addManager = () => {
         {
             name: 'employeeId',
             type: 'input',
-            message: 'employee ID',
+            message: 'Employee ID',
             validate: input => {
                 if (!input) {
                     return 'cannot be empty';
@@ -76,6 +76,62 @@ const addManager = () => {
     ));
 };
 
+// Questions to create a Engineer
+const addEngineer = () => {
+    return inquirer.prompt([
+        {
+            name: 'name',
+            type: 'input',
+            message: 'Engineer name',
+            validate: input => {
+                if (!input) {
+                    return 'cannot be empty';
+                }
+                return true;
+            }
+        },
+        {
+            name: 'employeeId',
+            type: 'input',
+            message: 'Employee ID',
+            validate: input => {
+                if (!input) {
+                    return 'cannot be empty';
+                }
+                return true;
+            }
+        },
+        {
+            name: 'emailAddress',
+            type: 'input',
+            message: 'Email address',
+            validate: input => {
+                if (!input) {
+                    return 'cannot be empty';
+                }
+                return isEmailValid(input);
+            }
+        },
+        {
+            name: 'gitHub',
+            type: 'input',
+            message: 'Git Hub',
+            validate: input => {
+                if (!input) {
+                    return 'cannot be empty';
+                }
+                return true;
+            }
+        }
+    ]).then(answers => new Engineer(
+        answers.name,
+        answers.employeeId,
+        answers.emailAddress,
+        answers.gitHub
+    ));
+};
+
+// Action selection menu
 function showMenu() {
     console.log("\nMenu:");
 
