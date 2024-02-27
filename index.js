@@ -212,7 +212,11 @@ function showMenu() {
                 break;
 
             case 'Add an Intern':
-                //
+                addIntern().then(intern => {
+                    console.log("Was created", intern);
+                    commandArray.push(intern);
+                    showMenu();
+                });
                 break;
 
             case 'Finish building the team':
