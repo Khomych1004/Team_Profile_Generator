@@ -13,11 +13,12 @@ const render = require("./src/page-template.js");
 // Regular expression for checking email
 const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
+// An array that contains team members
+let commandArray = [];
+
 // Email checking function
 function isEmailValid(email) {
-
     return EMAIL_REGEXP.test(email) ? true : "email address is invalid";
-
 };
 
 // Questions to create a Manager
@@ -75,9 +76,44 @@ const addManager = () => {
     ));
 };
 
+function showMenu() {
+    console.log("\nMenu:");
+
+    inquirer.prompt([
+        {
+            name: 'option',
+            type: 'list',
+            message: 'Select menu item:',
+            choices: [
+                'Add an engineer',
+                'Add an intern',
+                'Finish building the team'
+            ]
+        }
+    ]).then(({ option }) => {
+        switch (option) {
+            case 'Add an engineer':
+                //
+                break;
+
+            case 'Add an intern':
+                //
+                break;
+
+            case 'Finish building the team':
+                //
+                break;
+        }
+    });
+}
+
 // Start function
 function init() {
-    addManager().then(manager => { console.log("Was created", manager) });
+    addManager().then(manager => {
+        console.log("Was created", manager);
+        commandArray.push(manager);
+        showMenu();
+    });
 };
 
 init();
