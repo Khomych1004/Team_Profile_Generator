@@ -10,6 +10,16 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
+// Regular expression for checking email
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+// Email checking function
+function isEmailValid(email) {
+
+    return EMAIL_REGEXP.test(email) ? true : "email address is invalid";
+
+};
+
 // Questions to create a Manager
 const addManager = () => {
     return inquirer.prompt([
@@ -43,7 +53,7 @@ const addManager = () => {
                 if (!input) {
                     return 'cannot be empty';
                 }
-                return true;
+                return isEmailValid(input);
             }
         },
         {
@@ -67,7 +77,7 @@ const addManager = () => {
 
 // Start function
 function init() {
-    addManager().then(manager => {console.log("Was created", manager)});
+    addManager().then(manager => { console.log("Was created", manager) });
 };
 
 init();
