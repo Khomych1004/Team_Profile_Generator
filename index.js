@@ -220,7 +220,13 @@ function showMenu() {
                 break;
 
             case 'Finish building the team':
-                //
+                let renderHTML = render(commandArray);
+
+                if (fs.existsSync(OUTPUT_DIR)) {
+                    
+                } else {
+                    fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+                }
                 break;
         }
     });
