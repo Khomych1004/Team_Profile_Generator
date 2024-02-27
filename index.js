@@ -131,6 +131,61 @@ const addEngineer = () => {
     ));
 };
 
+// Questions to create a Intern
+const addIntern = () => {
+    return inquirer.prompt([
+        {
+            name: 'name',
+            type: 'input',
+            message: 'Intern name',
+            validate: input => {
+                if (!input) {
+                    return 'cannot be empty';
+                }
+                return true;
+            }
+        },
+        {
+            name: 'employeeId',
+            type: 'input',
+            message: 'Employee ID',
+            validate: input => {
+                if (!input) {
+                    return 'cannot be empty';
+                }
+                return true;
+            }
+        },
+        {
+            name: 'emailAddress',
+            type: 'input',
+            message: 'Email address',
+            validate: input => {
+                if (!input) {
+                    return 'cannot be empty';
+                }
+                return isEmailValid(input);
+            }
+        },
+        {
+            name: 'school',
+            type: 'input',
+            message: 'School',
+            validate: input => {
+                if (!input) {
+                    return 'cannot be empty';
+                }
+                return true;
+            }
+        }
+    ]).then(answers => new Intern(
+        answers.name,
+        answers.employeeId,
+        answers.emailAddress,
+        answers.school
+    ));
+ };
+
 // Action selection menu
 function showMenu() {
     console.log("\nMenu:");
