@@ -7,13 +7,15 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "keywords": [],
   "author": "Oleksandr Khomych",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "inquirer": "^9.2.15",
+    "inquirer": "^8.0.0"
+  },
+  "devdependencies": {
     "jest": "^29.7.0"
   }
 }
