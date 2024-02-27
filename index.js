@@ -184,7 +184,7 @@ const addIntern = () => {
         answers.emailAddress,
         answers.school
     ));
- };
+};
 
 // Action selection menu
 function showMenu() {
@@ -196,18 +196,22 @@ function showMenu() {
             type: 'list',
             message: 'Select menu item:',
             choices: [
-                'Add an engineer',
-                'Add an intern',
+                'Add an Engineer',
+                'Add an Intern',
                 'Finish building the team'
             ]
         }
     ]).then(({ option }) => {
         switch (option) {
-            case 'Add an engineer':
-                //
+            case 'Add an Engineer':
+                addEngineer().then(engineer => {
+                    console.log("Was created", engineer);
+                    commandArray.push(engineer);
+                    showMenu();
+                });
                 break;
 
-            case 'Add an intern':
+            case 'Add an Intern':
                 //
                 break;
 
