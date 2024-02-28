@@ -4,7 +4,7 @@
 
 ![application screenshot](documentation/1.jpg)
 
-###test report
+### test report
 ![application screenshot](documentation/2.jpg)
 
 ## Description
@@ -38,6 +38,6 @@ To create the application, I used resources on:
 ||
 [Inquirer](https://www.npmjs.com/package/inquirer)
 
-##My GitHub stats
+## My GitHub stats
 
 [![Khomych GitHub stats](https://github-readme-stats.vercel.app/api?username=Khomych1004)](https://github.com/anuraghazra/github-readme-stats)
