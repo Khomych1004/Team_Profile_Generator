@@ -186,6 +186,13 @@ const addIntern = () => {
     ));
 };
 
+// File saving function
+function saveFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        err ? console.error(err) : console.log(`file: '${fileName}' saved successfully`);
+    });
+}
+
 // Action selection menu
 function showMenu() {
     console.log("\nMenu:");
@@ -223,7 +230,7 @@ function showMenu() {
                 let renderHTML = render(commandArray);
 
                 if (fs.existsSync(OUTPUT_DIR)) {
-                    
+                    saveFile(outputPath, renderHTML);
                 } else {
                     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
                 }
@@ -241,4 +248,5 @@ function init() {
     });
 };
 
+// Start
 init();
