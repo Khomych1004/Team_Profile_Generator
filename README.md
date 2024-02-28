@@ -40,4 +40,4 @@ To create the application, I used resources on:
 
 ## My GitHub stats
 
-![Khomych1004's GitHub stats](https://github-readme-stats.vercel.app/api?username=Khomych1004?theme=transparent_icons=true)
+![Khomych1004's GitHub stats](https://github-readme-stats.vercel.app/api?username=Khomych1004&theme=transparent_icons=true)
