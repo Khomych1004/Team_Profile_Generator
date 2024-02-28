@@ -10,6 +10,8 @@ test report
 ## Description
 Node.js command line application. This application will collect information about the employees of a software development team and then create an HTML web page that displays summary data for each person. every piece of code passes every test provided.
 
+You can see a sample of the created HTML page at the link -> [here](https://github.com/Khomych1004/Team_Profile_Generator/blob/main/output/team.html)
+
 ## Usage
 ```
 required for use
@@ -35,3 +37,7 @@ To create the application, I used resources on:
 [Jest](https://www.npmjs.com/package/jest)
 ||
 [Inquirer](https://www.npmjs.com/package/inquirer)
+
+##My GitHub stats
+
+[![Khomych GitHub stats](https://github-readme-stats.vercel.app/api?username=Khomych1004)](https://github.com/anuraghazra/github-readme-stats)
