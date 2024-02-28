@@ -38,6 +38,6 @@ To create the application, I used resources on:
 ||
 [Inquirer](https://www.npmjs.com/package/inquirer)
 
-### My GitHub stats
+##
 
 ![Khomych1004's GitHub stats](https://github-readme-stats.vercel.app/api?username=Khomych1004&show_icons=true&theme=transparent)
