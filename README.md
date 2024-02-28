@@ -1,6 +1,6 @@
 # Team Profile Generator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![](https://komarev.com/ghpvc/?username=Khomych1004)
 
 ![application screenshot](documentation/1.jpg)
 
@@ -40,4 +40,4 @@ To create the application, I used resources on:
 
 ## My GitHub stats
 
-[![Khomych GitHub stats](https://github-readme-stats.vercel.app/api?username=Khomych1004)](https://github.com/anuraghazra/github-readme-stats)
+![Khomych1004's GitHub stats](https://github-readme-stats.vercel.app/api?username=Khomych1004&theme=transparent_icons=true)
